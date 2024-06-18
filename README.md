@@ -43,7 +43,7 @@ OUTPUT
 By default, the output will be displayed on screen and saved in ./output/output.txt.
 You can specify another name in settings.txt
 
-Password Hunting with ML (This blog covers this repo, but is dated)
+Password Hunting with ML (blog covers this repo)
 REF: https://www.atlan.digital/lab/machine-learning-for-red-teams
 
 Future State: 
