@@ -56,3 +56,71 @@ https://www.atlan.digital/lab/malware-gan-and-atp-detailed-introduction
 
 Malware GAN Part 2: Into EDR & MDR
 https://www.atlan.digital/lab/malwaregan-part-2-deeper-into-killchain
+
+Turul C2 Framework
+https://turul.atlan.digital
+
+// SharpML is based on the 'Machine Learning for Red Teams' course
+
+Table of Contents
+
+Chapter 1: Introduction
+
+Overview of the proof of concept tool combining a custom Machine Learning algorithm and a C# wrapper.
+Watch Introduction Video
+Chapter 2: Python
+
+Install Required Software
+Setting a Workspace
+Basic Program - Hello World
+Scalar Types, Strings, Variables
+Tuples, Lists, Sets, Dictionaries
+Indentation, If Elif Else, For Loop, While Loop
+Break Continue, Defining a Function, Methods, Structure
+Using Instances, Arguments Passing, Mutable and Immutable
+Standard Library, Numpy, Scipy, Matplotlib Pyplot, Pandas, I/O
+Chapter 3: Machine Learning Theory and Designing an Algorithm
+
+Basics - Theory
+Workflow of an ML Algorithm - Theory
+(K-mean) & Distances - Theory
+Class Definition - Practical
+Normalization - Practical
+Outliers Removal - Practical
+Split Data - Training & Test Data - Practical
+Model Selection - Practical
+Score - Practical
+Plot Data - Practical
+Why Not Neural Networks - Theory
+Chapter 4: Building SharpML
+
+SharpML Python Model Code
+Organization of SharpML Code
+Class Set Up, Load Data, Load Rules
+Training, Testing, Results
+Final Considerations, Init, Save Output, Run, Examples
+C# Code Overview, Next Steps
+Chapter 5: Build a CMS Web Analyzer
+
+Intro, Further, Instructions
+Develop a model to identify and classify web component technologies.
+Translate the solution into features, scrape data, and compile a dataset.
+Create a high-performance ML model and integrate into security tools.
+Final project submission includes a comprehensive explanation and code.
+Chapter 6: Build a Macaronic Obfuscator
+
+Intro, Further, Instructions
+Create a Python tool for obfuscating C# project files to evade ATP detection.
+Set up an ATP E5 lab, interface with AMSI, generate wordlists.
+Develop a static obfuscator pipeline and junk code generation function.
+Final project submission includes detailed documentation and obfuscation code.
+Chapter 7 (LLM BONUS): Build an LLM Infused SAST Tool
+
+Intro, Further, Instructions, Final Words
+Deploy a local LLM and integrate with a secure code regex tool.
+Highlight vulnerable code using Control Flow Graph generators.
+Integrate the workflow into a web app with an HTML dashboard.
+Final project documentation and code tested against specified repositories.
+Each chapter provides a structured overview of the topics and practical steps involved, designed to guide learners through the process of utilizing advanced technologies and methods effectively.
+
+https://www.atlan.digital/train/machine-learning-for-red-teams
