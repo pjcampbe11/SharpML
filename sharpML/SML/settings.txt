@@ -1,0 +1,27 @@
+#REQUIREMENTS
+
+#TRAINING
+train = "True"                         #determines if you want to train the model and therefore to create rules
+file_password = "./input/password.txt"  #contains passwords for training
+file_conf = "None"                      #contains symbols which are interesting in determining passwords
+
+
+#INTERMEDIATE OUTPUT
+file_rules = "./input/rules.txt"        #rules output of training
+
+#TESTING
+file_data = "./input/input.txt"         #data to analyse [mandatory]
+file_users = "./input/users.txt"        #file containing the list of users you want to catch the password, one per line.
+                                        #set to 'None' if you don't want to use this functionality
+pass_mode = "all"                       #'user' to find only pairs user-pass, 'global' to find isolated passwords and 'all' for both 
+file_common_passwords = "None"          #if you have a list of know common passwords, place the corresponding txt file name here
+strong_pass = "False"                   #if you know that you are trying to find a complex password (referring to Microsoft policy), set this to True
+sensibility_line = "0.25"               #words over this threshold of max-min normalized likelihood are considered passwords
+sensibility_global = "2.5"              #outliers (in our case, passwords) are above Z-value=2.5 when mean-std norm
+deep_line = "0"                         #if password is not found on the user line, it will check deep_line additional lines.
+                                        #It makes sense if strong_pass = True, otherwise it will find the most probable password in the line 
+                                        #and will not analyze next ones.
+
+#OUTPUT
+file_output = "./output/output.txt"    #name of the output file
+

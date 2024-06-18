@@ -1,0 +1,102 @@
+#!/usr/bin/env python
+
+import numpy as np
+from string import punctuation
+from sklearn.metrics import classification_report
+
+class Security():
+    def __init__(self, file_training, file_testing):
+        """
+        init function for class Security
+
+        Parameters
+        ----------
+        file_training (txt): file containing passwords for training
+        file_testing (txt): file containing words for testing
+
+        """
+        self.data_training, self.labels_training = self.load_data(file_training)
+        self.data_testing, self.labels_testing = self.load_data(file_testing)
+        self.likelihood = np.zeros(len(self.data_testing)) #likelihood of each word to be a password
+        self.likelihood_norm = np.zeros(np.shape(self.likelihood))
+        self.rules = {} #dictionary rule --> score (self.rules['£'] = 0.43)
+        self.predictions = None #predictions of the algorithm
+    def load_data(self, file_name):
+        """
+        load data and labels from file
+        """
+        data = []
+        labels = []
+        with open(file_name, 'r') as fin:
+            for line in fin.readlines():
+                data.append(line.strip('\n').split()[0])
+                labels.append(line.strip('\n').split()[1])
+        return np.array(data), np.array(labels).astype(int)
+    def load_rules(self):
+        """
+        Define rules for passwords
+        """
+        for symbol in punctuation:
+            self.rules[symbol] = 0.0
+        self.rules['uppercase'] = 0.0
+        self.rules['number'] = 0.0
+    def training(self):
+        """
+        Assign a score for each symbol, based on the training set
+        """
+        len_document = len(self.data_training)
+        for word in self.data_training:
+            for letter in word:
+                try:
+                    self.rules[letter]+= 1.0/len_document
+                except KeyError:
+                    self.rules[letter] = 1.0/len_document
+                if(letter.isupper()):
+                    self.rules['uppercase'] += 1.0/len_document
+                if(letter.isdigit()):
+                    self.rules['number'] += 1.0/len_document
+    def testing(self, Z_value = 2.5):
+        """
+        Testing process for algorithm
+
+        Parameters
+        ----------
+        Z_value (float): threshold for outliers (passwords) identification
+        """
+        for i_word, word in enumerate(self.data_testing):
+            for character in word:
+                self.check_upper(i_word, character)
+                self.check_digit(i_word, character)
+                self.check_special(i_word, character)
+        self.normalize_likelihood()
+        self.predictions = 1*(self.likelihood_norm > Z_value)
+    def check_upper(self, i_word, character):
+        if character.isupper():
+            self.likelihood[i_word]+=self.rules['uppercase']  
+    def check_digit(self, i_word, character):
+        if character.isdigit():
+            self.likelihood[i_word]+=self.rules['number']  
+    def check_special(self, i_word, character):
+        if character in self.rules.keys():
+            self.likelihood[i_word]+=self.rules[character]  
+    def normalize_likelihood(self):
+        self.likelihood_norm = (self.likelihood - np.mean(self.likelihood))/np.std(self.likelihood)
+    def score(self):
+        true_passwords = self.data_testing[np.where(self.labels_testing==1)[0]]
+        predicted_passwords = self.data_testing[np.where(self.predictions==1)[0]]
+        print("\nTrue passwords: ", true_passwords)
+        print("\nPredicted passwords: ", predicted_passwords)
+        print("\nScore : ", classification_report(self.labels_testing, self.predictions))
+        
+    def run(self):
+        """
+        run istance of class 
+        """
+        self.load_rules()
+        self.training()
+        self.testing()
+        self.score()
+
+if __name__ == '__main__':
+    S = Security("training.txt","testing.txt")
+    S.run()

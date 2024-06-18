@@ -1,0 +1,3 @@
+text to strip
+otherwise \n will appear 
+everywhere
