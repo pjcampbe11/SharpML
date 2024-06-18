@@ -43,4 +43,16 @@ OUTPUT
 By default, the output will be displayed on screen and saved in ./output/output.txt.
 You can specify another name in settings.txt
 
+Password Hunting with ML (This blog covers this repo, but is dated)
 REF: https://www.atlan.digital/lab/machine-learning-for-red-teams
+
+Future State: 
+
+Maldev Testing Env
+https://www.atlan.digital/lab/maldev-testing-environment
+
+Malware GAN & APT
+https://www.atlan.digital/lab/malware-gan-and-atp-detailed-introduction
+
+Malware GAN Part 2: Into EDR & MDR
+https://www.atlan.digital/lab/malwaregan-part-2-deeper-into-killchain
