@@ -133,3 +133,10 @@ Final project documentation and code tested against specified repositories.
 Each chapter provides a structured overview of the topics and practical steps involved, designed to guide learners through the process of utilizing advanced technologies and methods effectively.
 
 https://www.atlan.digital/train/machine-learning-for-red-teams
+
+
+Other:
+https://github.com/HunnicCyber/SharpML
+https://www.atlan.digital/lab/red-team-information-gathering
+https://github.com/HunnicCyber/SharpSniper
+https://github.com/HunnicCyber/SharpDomainSpray
