@@ -134,7 +134,6 @@ Each chapter provides a structured overview of the topics and practical steps in
 
 https://www.atlan.digital/train/machine-learning-for-red-teams
 
-
 Other:
 https://github.com/HunnicCyber/SharpML
 https://www.atlan.digital/lab/red-team-information-gathering
