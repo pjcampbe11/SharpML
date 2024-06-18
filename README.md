@@ -1,5 +1,7 @@
 # SharpML
 
+//Will keep private on personal GitHub until the code is fully understood. Goal would be to mv to CodeCommit. I think if we can get to a place where we can leverage custom AI models built to carry out various attacks, many of mics will be dropped \0/
+
 INSTRUCTIONS
 This is the Machine Learning module used by SharpML software, 
 and can be used to retrieve the following information:
@@ -68,6 +70,7 @@ Chapter 1: Introduction
 
 Overview of the proof of concept tool combining a custom Machine Learning algorithm and a C# wrapper.
 Watch Introduction Video
+
 Chapter 2: Python
 
 Install Required Software
@@ -79,6 +82,7 @@ Indentation, If Elif Else, For Loop, While Loop
 Break Continue, Defining a Function, Methods, Structure
 Using Instances, Arguments Passing, Mutable and Immutable
 Standard Library, Numpy, Scipy, Matplotlib Pyplot, Pandas, I/O
+
 Chapter 3: Machine Learning Theory and Designing an Algorithm
 
 Basics - Theory
@@ -92,6 +96,7 @@ Model Selection - Practical
 Score - Practical
 Plot Data - Practical
 Why Not Neural Networks - Theory
+
 Chapter 4: Building SharpML
 
 SharpML Python Model Code
@@ -100,6 +105,7 @@ Class Set Up, Load Data, Load Rules
 Training, Testing, Results
 Final Considerations, Init, Save Output, Run, Examples
 C# Code Overview, Next Steps
+
 Chapter 5: Build a CMS Web Analyzer
 
 Intro, Further, Instructions
@@ -107,6 +113,7 @@ Develop a model to identify and classify web component technologies.
 Translate the solution into features, scrape data, and compile a dataset.
 Create a high-performance ML model and integrate into security tools.
 Final project submission includes a comprehensive explanation and code.
+
 Chapter 6: Build a Macaronic Obfuscator
 
 Intro, Further, Instructions
@@ -114,6 +121,7 @@ Create a Python tool for obfuscating C# project files to evade ATP detection.
 Set up an ATP E5 lab, interface with AMSI, generate wordlists.
 Develop a static obfuscator pipeline and junk code generation function.
 Final project submission includes detailed documentation and obfuscation code.
+
 Chapter 7 (LLM BONUS): Build an LLM Infused SAST Tool
 
 Intro, Further, Instructions, Final Words
@@ -121,6 +129,7 @@ Deploy a local LLM and integrate with a secure code regex tool.
 Highlight vulnerable code using Control Flow Graph generators.
 Integrate the workflow into a web app with an HTML dashboard.
 Final project documentation and code tested against specified repositories.
+
 Each chapter provides a structured overview of the topics and practical steps involved, designed to guide learners through the process of utilizing advanced technologies and methods effectively.
 
 https://www.atlan.digital/train/machine-learning-for-red-teams
