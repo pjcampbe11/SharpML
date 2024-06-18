@@ -42,3 +42,6 @@ When you don't want to train the model anymore, set the training variable to "Fa
 OUTPUT
 By default, the output will be displayed on screen and saved in ./output/output.txt.
 You can specify another name in settings.txt
+
+REF: [
+](https://www.atlan.digital/lab/machine-learning-for-red-teams)
