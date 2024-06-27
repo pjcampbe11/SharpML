@@ -1,7 +1,5 @@
 # SharpML
 
-//Will keep private on personal GitHub until the code is fully understood. Goal would be to mv to CodeCommit. I think if we can get to a place where we can leverage custom AI models built to carry out various attacks, many of mics will be dropped \0/
-
 INSTRUCTIONS
 This is the Machine Learning module used by SharpML software, 
 and can be used to retrieve the following information:
@@ -48,7 +46,7 @@ You can specify another name in settings.txt
 Password Hunting with ML (blog covers this repo)
 REF: https://www.atlan.digital/lab/machine-learning-for-red-teams
 
-Future State: 
+Advanced Evasion: 
 
 Maldev Testing Env
 https://www.atlan.digital/lab/maldev-testing-environment
